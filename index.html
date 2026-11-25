@@ -32,7 +32,7 @@
                     <span class="institution-name">ASOCIACIÓN DOMINICANA DE REHABILITACIÓN</span>
                     <h1 class="dashboard-title">
                         Análisis del Cuello de Botella
-                        <span class="period-badge">Período: 01-OCT-2025 hasta 29-SEP-2026</span>
+                        <span class="period-badge">Resumen Ejecutivo por Centro</span>
                     </h1>
                 </div>
             </div>
@@ -58,81 +58,23 @@
         </div>
     </header>
 
-    <!-- Barra de Filtros Globales -->
-    <section class="filters-bar" aria-label="Filtros del reporte">
+    <!-- Barra de Filtros Globales: Centro -->
+    <section class="filters-bar" aria-label="Filtros Globales">
         <div class="filters-container">
             <div class="filters-inputs">
                 <div class="filter-group">
-                    <label for="filter-centro">Centro</label>
+                    <label for="filter-centro">Filtrar por Centro</label>
                     <select id="filter-centro" class="filter-select">
-                        <option value="ALL">Todos los Centros</option>
+                        <option value="ALL">Todos los Centros (Consolidado)</option>
                         <option value="AZUA">AZUA</option>
                         <option value="SANTIAGO">SANTIAGO</option>
                         <option value="SANTO DOMINGO">SANTO DOMINGO</option>
-                        <option value="SD ESTE">SD ESTE</option>
-                        <option value="SD OESTE">SD OESTE</option>
-                    </select>
-                </div>
-
-                <div class="filter-group filter-group-wide">
-                    <label for="filter-area">Descripción del Área</label>
-                    <select id="filter-area" class="filter-select">
-                        <option value="ALL">Todas las Áreas</option>
-                        <option value="APOYO PEDAGOGICO">APOYO PEDAGOGICO</option>
-                        <option value="EID ELECTROENCEFALOGRAMA">EID ELECTROENCEFALOGRAMA</option>
-                        <option value="EID ELECTROMIOGRAFIA">EID ELECTROMIOGRAFIA</option>
-                        <option value="EID RAYOS X">EID RAYOS X</option>
-                        <option value="EID SONOGRAFIA">EID SONOGRAFIA</option>
-                        <option value="EVALUACION PEDAGOGICA">EVALUACION PEDAGOGICA</option>
-                        <option value="EVALUACION PSICOLOGICA">EVALUACION PSICOLOGICA</option>
-                        <option value="ITEMP ESTIMULACION TEMPRANA">ITEMP ESTIMULACION TEMPRANA</option>
-                        <option value="ITEMP EVALUACION DEL LENGUAJE">ITEMP EVALUACION DEL LENGUAJE</option>
-                        <option value="ITEMP EVALUACION DESARROLLO">ITEMP EVALUACION DESARROLLO</option>
-                        <option value="ITEMP PSICOLOGIA">ITEMP PSICOLOGIA</option>
-                        <option value="ITEMP TERAPIA DEL LENGUAJE">ITEMP TERAPIA DEL LENGUAJE</option>
-                        <option value="ITEMP TERAPIA FISICA">ITEMP TERAPIA FISICA</option>
-                        <option value="ITEMP TERAPIA OCUPACIONAL">ITEMP TERAPIA OCUPACIONAL</option>
-                        <option value="MF CLINICA AMPUTADOS">MF CLINICA AMPUTADOS</option>
-                        <option value="MF FISIATRIA">MF FISIATRIA</option>
-                        <option value="MF MEDICINA GENERAL">MF MEDICINA GENERAL</option>
-                        <option value="MF NEUROLOGIA">MF NEUROLOGIA</option>
-                        <option value="MF ORTOMEDULAR / ESCOLIOSIS">MF ORTOMEDULAR / ESCOLIOSIS</option>
-                        <option value="MF PEDIATRIA">MF PEDIATRIA</option>
-                        <option value="MF PSIQUIATRIA">MF PSIQUIATRIA</option>
-                        <option value="ODONTOLOGIA GENERAL">ODONTOLOGIA GENERAL</option>
-                        <option value="PSI EVALUACION">PSI EVALUACION</option>
-                        <option value="PSI T. CONDUCTUAL">PSI T. CONDUCTUAL</option>
-                        <option value="TF ANGELITA OZORIA">TF ANGELITA OZORIA</option>
-                        <option value="TF CONDICIONES NEUROLOGICAS">TF CONDICIONES NEUROLOGICAS</option>
-                        <option value="TF ESCUELA DE ESPALDA">TF ESCUELA DE ESPALDA</option>
-                        <option value="TF ESCUELA DE HOMBROS">TF ESCUELA DE HOMBROS</option>
-                        <option value="TF EVALUACIONES 1">TF EVALUACIONES 1</option>
-                        <option value="TF EVALUACIONES CLINICA">TF EVALUACIONES CLINICA</option>
-                        <option value="TF EVA_PEDI">TF EVA_PEDI</option>
-                        <option value="TF GIMNASIO">TF GIMNASIO</option>
-                        <option value="TF HIDROTERAPIA">TF HIDROTERAPIA</option>
-                        <option value="TF MANOS">TF MANOS</option>
-                        <option value="TF MIEMBRO INFERIOR">TF MIEMBRO INFERIOR</option>
-                        <option value="TF MIEMBRO SUPERIOR">TF MIEMBRO SUPERIOR</option>
-                        <option value="TF MODULOS">TF MODULOS</option>
-                        <option value="TF PARALISIS FACIAL">TF PARALISIS FACIAL</option>
-                        <option value="TF PEDI">TF PEDI</option>
-                        <option value="TL&A AUDIOMETRIA">TL&A AUDIOMETRIA</option>
-                        <option value="TL&A EVALUACION">TL&A EVALUACION</option>
-                        <option value="TL&A TERAPIA DE VOZ">TL&A TERAPIA DE VOZ</option>
-                        <option value="TL&A TRATAMIENTO">TL&A TRATAMIENTO</option>
-                        <option value="TO EVALUACION CLINICA">TO EVALUACION CLINICA</option>
-                        <option value="TO EVALUACIONES">TO EVALUACIONES</option>
-                        <option value="TO PEDIATRIA> 6">TO PEDIATRIA&gt; 6</option>
-                        <option value="TO TERAPIA DE GRUPO">TO TERAPIA DE GRUPO</option>
-                        <option value="TO TRATAMIENTO">TO TRATAMIENTO</option>
-                        <option value="TO VIDA DIARIA">TO VIDA DIARIA</option>
                     </select>
                 </div>
             </div>
 
             <div class="filter-actions">
-                <span id="filter-status-badge" class="filter-status">Todos los Centros • Todas las Áreas</span>
+                <span id="filter-status-badge" class="filter-status">Vista: Todos los Centros</span>
                 <button id="btn-reset-filters" class="btn-reset" type="button">Restablecer</button>
             </div>
         </div>
@@ -146,182 +88,269 @@
             <div class="section-header">
                 <div class="section-accent teal"></div>
                 <div>
-                    <h2>Análisis Descriptivo</h2>
-                    <p>Indicadores de volumen de visitas, tasas de atención y distribución por cuartiles de tiempos de espera.</p>
+                    <h2>Análisis Descriptivo — Demanda y Cobertura</h2>
+                    <p>Magnitud de la operación, alcance poblacional y capacidad de respuesta frente a la demanda programada y espontánea.</p>
                 </div>
             </div>
 
-            <!-- Fila 1: Volumen y Porcentajes (5 Tarjetas Dinámicas) -->
-            <div class="kpi-grid-5">
+            <!-- Fila 1: Demanda Programada y Cobertura (4 Tarjetas) -->
+            <div class="kpi-grid-4">
                 <article class="kpi-card border-teal">
                     <div class="kpi-header">
-                        <span class="kpi-title">Total Visitas</span>
-                        <span class="kpi-badge badge-teal">Volumen</span>
+                        <span class="kpi-title">Visitas Programadas</span>
+                        <span class="kpi-badge badge-teal">Demanda</span>
                     </div>
-                    <div class="kpi-value" id="kpi-total-visitas">856,931</div>
-                    <div class="kpi-sub">Total de visitas registradas</div>
+                    <div class="kpi-value" id="kpi-visitas-programadas">--</div>
+                    <div class="kpi-sub">Volumen total de visitas agendadas</div>
+                </article>
+
+                <article class="kpi-card border-teal">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Pacientes Distintos</span>
+                        <span class="kpi-badge badge-teal">Alcance</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-pacientes-distintos">--</div>
+                    <div class="kpi-sub">Población única registrada</div>
                 </article>
 
                 <article class="kpi-card border-teal">
                     <div class="kpi-header">
                         <span class="kpi-title">Total Atendidas</span>
-                        <span class="kpi-badge badge-teal">Efectivas</span>
+                        <span class="kpi-badge badge-teal">Producción</span>
                     </div>
-                    <div class="kpi-value" id="kpi-total-atendidas">593,310</div>
-                    <div class="kpi-sub">Visitas completadas con atención</div>
-                </article>
-
-                <article class="kpi-card border-orange">
-                    <div class="kpi-header">
-                        <span class="kpi-title">Total No Atendidas</span>
-                        <span class="kpi-badge badge-orange">Sin Atención</span>
-                    </div>
-                    <div class="kpi-value" id="kpi-total-no-atendidas">263,621</div>
-                    <div class="kpi-sub">Visitas no atendidas</div>
+                    <div class="kpi-value" id="kpi-total-atendidas">--</div>
+                    <div class="kpi-sub">Consultas completadas con éxito</div>
                 </article>
 
                 <article class="kpi-card border-teal">
                     <div class="kpi-header">
                         <span class="kpi-title">% Atendidas</span>
-                        <span class="kpi-badge badge-teal">Tasa Éxito</span>
+                        <span class="kpi-badge badge-teal">Cumplimiento</span>
                     </div>
-                    <div class="kpi-value" id="kpi-pct-atendidas">69%</div>
-                    <div class="kpi-sub">Porcentaje de visitas atendidas</div>
-                </article>
-
-                <article class="kpi-card border-red">
-                    <div class="kpi-header">
-                        <span class="kpi-title">% No Atendidas</span>
-                        <span class="kpi-badge badge-red">Tasa Pérdida</span>
-                    </div>
-                    <div class="kpi-value" id="kpi-pct-no-atendidas">31%</div>
-                    <div class="kpi-sub">Porcentaje de visitas no atendidas</div>
+                    <div class="kpi-value" id="kpi-pct-atendidas">--</div>
+                    <div class="kpi-sub">Tasa global de efectividad de agenda</div>
                 </article>
             </div>
 
-            <!-- Fila 2: Tiempos de Espera por Cuartiles / Percentiles (3 Tarjetas con Tooltip Explicativo) -->
+            <!-- Fila 2: Demanda Espontánea / Sin Cita (3 Tarjetas) -->
             <div class="kpi-grid-3">
-                <article class="kpi-card border-teal kpi-hover-info" id="card-espera-mediana" data-metric-type="mediana" tabindex="0">
+                <article class="kpi-card border-terracotta">
                     <div class="kpi-header">
-                        <span class="kpi-title">Tiempo Espera Mediana <span class="kpi-info-dot" aria-hidden="true">?</span></span>
-                        <span class="kpi-badge badge-teal">Q2 • P50</span>
+                        <span class="kpi-title">Citas No Programadas</span>
+                        <span class="kpi-badge badge-terracotta">Espontánea</span>
                     </div>
-                    <div class="kpi-value" id="kpi-espera-mediana">79.97 <small>min</small></div>
-                    <div class="kpi-sub" id="sub-espera-mediana">Mediana de espera (Cuartil 2)</div>
+                    <div class="kpi-value" id="kpi-citas-no-programadas">--</div>
+                    <div class="kpi-sub">Pacientes que acudieron sin cita previa</div>
                 </article>
 
-                <article class="kpi-card border-orange kpi-hover-info" id="card-espera-maximo" data-metric-type="maximo" tabindex="0">
+                <article class="kpi-card border-terracotta">
                     <div class="kpi-header">
-                        <span class="kpi-title">Tiempo Espera Máximo <span class="kpi-info-dot" aria-hidden="true">?</span></span>
-                        <span class="kpi-badge badge-orange">Percentil 90</span>
+                        <span class="kpi-title">No Prog. Atendidas</span>
+                        <span class="kpi-badge badge-terracotta">Resolución</span>
                     </div>
-                    <div class="kpi-value" id="kpi-espera-maximo">-- --</div>
-                    <div class="kpi-sub" id="sub-espera-maximo">Aplica un filtro para medir (P90 sin atípicos)</div>
+                    <div class="kpi-value" id="kpi-no-prog-atendidas">--</div>
+                    <div class="kpi-sub">Consultas sin cita resueltas</div>
                 </article>
 
-                <article class="kpi-card border-terracotta kpi-hover-info" id="card-espera-minimo" data-metric-type="minimo" tabindex="0">
+                <article class="kpi-card border-orange">
                     <div class="kpi-header">
-                        <span class="kpi-title">Tiempo Espera Mínimo <span class="kpi-info-dot" aria-hidden="true">?</span></span>
-                        <span class="kpi-badge badge-terracotta">Cuartil 1 (Q1)</span>
+                        <span class="kpi-title">% Atención Sin Cita</span>
+                        <span class="kpi-badge badge-orange">Proporción</span>
                     </div>
-                    <div class="kpi-value" id="kpi-espera-minimo">-- --</div>
-                    <div class="kpi-sub" id="sub-espera-minimo">Aplica un filtro para medir (Cuartil 1)</div>
+                    <div class="kpi-value" id="kpi-pct-sin-cita">--</div>
+                    <div class="kpi-sub">Peso sobre el total de atendidas</div>
                 </article>
             </div>
 
-            <!-- Gráfica Principal + Lienzo Gráfico Secundario -->
-            <div class="grid-asymmetric">
-                <!-- LIENZO PRINCIPAL: GRÁFICA APILADA POR CENTRO (FILTRA ÚNICAMENTE POR DescripcionArea) -->
-                <article class="chart-card chart-slot-lg" id="desc-chart-main">
-                    <div class="chart-card-header">
-                        <div class="chart-title-group">
-                            <div class="chart-eyebrow">
-                                <span class="chart-scope-pill" id="chart-area-scope">Todas las Áreas</span>
-                                <span class="chart-lock-note" title="Esta gráfica filtra únicamente por Descripción del Área e ignora el filtro de Centro">Filtro exclusivo: Descripción del Área</span>
-                            </div>
-                            <h3 class="chart-title">Cantidad de visitas atendidas y no atendidas por centro</h3>
+            <!-- Contenedor de Gráficas en 2 Columnas -->
+            <div class="charts-layout-grid">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="charts-left-stack">
+
+                    <!-- GRÁFICA 1: Barras Verticales (Atendidas vs No atendidas) -->
+                    <article class="chart-card">
+                        <div class="chart-top-pills">
+                            <span class="pill-tag pill-teal" id="chart1-centro-pill">Todos los Centros</span>
                         </div>
 
-                        <div class="chart-controls">
-                            <!-- Selector de Modo (Conteo vs 100%) -->
-                            <div class="chart-mode-toggle" role="group" aria-label="Modo de visualización">
-                                <button type="button" class="mode-btn active" data-mode="count">Conteo</button>
-                                <button type="button" class="mode-btn" data-mode="percent">100%</button>
+                        <h3 class="chart-main-title">Cantidad de visitas atendidas y no atendidas por centro</h3>
+
+                        <div class="chart-toolbar">
+                            <div class="mode-toggle" id="chart1-mode-toggle" role="group" aria-label="Modo de visualización">
+                                <button type="button" class="mode-btn" data-mode="conteo">Conteo</button>
+                                <button type="button" class="mode-btn active" data-mode="porcentaje">100%</button>
                             </div>
 
-                            <!-- Leyenda Interactiva Estado de Visita -->
-                            <div class="chart-legend" aria-label="Estado de visita">
-                                <span class="legend-heading">Estado de visita:</span>
-                                <button type="button" class="legend-item active" data-series="atendidas" aria-pressed="true">
-                                    <span class="legend-swatch swatch-atendidas"></span>
+                            <div class="legend-group" id="chart1-series-group" role="group" aria-label="Estado de visita">
+                                <span class="legend-label">Estado de visita:</span>
+                                <button type="button" class="series-btn active" data-series="atendidas" aria-pressed="true">
+                                    <span class="legend-dot dot-atendidas"></span>
                                     Atendidas
                                 </button>
-                                <button type="button" class="legend-item active" data-series="noAtendidas" aria-pressed="true">
-                                    <span class="legend-swatch swatch-no-atendidas"></span>
+                                <button type="button" class="series-btn active" data-series="noAtendidas" aria-pressed="true">
+                                    <span class="legend-dot dot-no-atendidas"></span>
                                     No atendidas
                                 </button>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="chart-canvas-wrapper" id="stacked-chart-container">
-                        <!-- Renderizado dinámico SVG -->
-                    </div>
-                </article>
+                        <div class="chart-divider"></div>
 
-                <!-- LIENZO GRÁFICO SECUNDARIO: HISTOGRAMA DE FRECUENCIA POR DÍA DE LA SEMANA -->
-                <article class="chart-card chart-slot-md" id="desc-chart-side">
-                    <div class="chart-card-header">
-                        <div class="chart-title-group">
-                            <div class="chart-eyebrow">
-                                <span class="chart-scope-pill" id="hist-filter-scope">Todos los Centros • Todas las Áreas</span>
-                                <span class="hist-type-badge">Histograma Continuo</span>
+                        <div class="stacked-chart-wrapper">
+                            <div class="y-axis-title" id="chart1-y-title">Distribución (%)</div>
+                            <div class="chart-plot-area">
+                                <div class="chart-grid-lines" id="chart1-grid-lines"></div>
+                                <div class="chart-bars-container" id="chart1-bars-container"></div>
                             </div>
-                            <h3 class="chart-title">Frecuencia de visitas por día de la semana</h3>
+                        </div>
+                        <div class="x-axis-title">Centros</div>
+                    </article>
+
+                    <!-- GRÁFICA 3: Pirámide Poblacional Dinámica por Centro -->
+                    <article class="chart-card chart-card-compact">
+                        <div class="chart-top-pills compact-pills">
+                            <span class="pill-tag pill-teal" id="pyr-centro-pill">Todos los Centros</span>
+                            <span class="pill-tag pill-gray" id="pyr-total-pill">Total: 860,547 visitas</span>
+
+                            <div class="intensity-scale-legend" title="Degradado institucional según concentración">
+                                <span>Menor</span>
+                                <span class="scale-swatch sw-low"></span>
+                                <span class="scale-swatch sw-mid"></span>
+                                <span class="scale-swatch sw-high"></span>
+                                <span>Fuerte</span>
+                            </div>
                         </div>
 
-                        <div class="hist-legend" aria-label="Jornada semanal">
-                            <span class="hist-legend-item">
-                                <span class="hist-swatch swatch-weekday"></span>
-                                Lun–Vie
-                            </span>
-                            <span class="hist-legend-item">
-                                <span class="hist-swatch swatch-saturday"></span>
-                                Sábado
-                            </span>
-                        </div>
-                    </div>
+                        <div class="compact-header-row">
+                            <h3 class="chart-main-title compact-title">Pirámide poblacional por edad y sexo</h3>
 
-                    <div class="chart-canvas-wrapper" id="weekday-histogram-container">
-                        <!-- Renderizado dinámico SVG del histograma -->
-                    </div>
-                </article>
+                            <div class="chart-toolbar compact-toolbar">
+                                <div class="mode-toggle" id="pyr-mode-toggle" role="group" aria-label="Modo pirámide">
+                                    <button type="button" class="mode-btn active" data-mode="porcentaje">%</button>
+                                    <button type="button" class="mode-btn" data-mode="conteo">Conteo</button>
+                                </div>
+
+                                <div class="legend-group" id="pyr-series-group" role="group" aria-label="Sexo">
+                                    <button type="button" class="series-btn compact-series-btn active" data-series="M" aria-pressed="true">
+                                        Hombres
+                                    </button>
+                                    <button type="button" class="series-btn compact-series-btn active" data-series="F" aria-pressed="true">
+                                        Mujeres
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-divider compact-divider"></div>
+
+                        <div class="pyramid-box">
+                            <div class="pyramid-side-badges">
+                                <span class="pyr-badge-pill male" id="pyr-left-badge">Hombres (en %)</span>
+                                <span class="pyr-center-caption">Edad</span>
+                                <span class="pyr-badge-pill female" id="pyr-right-badge">Mujeres (en %)</span>
+                            </div>
+
+                            <div class="pyramid-grid-body" id="pyramid-rows-container"></div>
+                            <div class="pyramid-axis-scale" id="pyramid-axis-scale"></div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="charts-right-stack">
+
+                    <!-- GRÁFICA 2: Atendidas con cita vs sin cita -->
+                    <article class="chart-card">
+                        <div class="chart-top-pills">
+                            <span class="pill-tag pill-teal" id="chart2-centro-pill">Todos los Centros</span>
+                        </div>
+
+                        <h3 class="chart-main-title">Atendidas con cita y atendidas sin cita por centro</h3>
+
+                        <div class="chart-toolbar">
+                            <div class="mode-toggle" id="chart2-mode-toggle" role="group" aria-label="Modo de visualización">
+                                <button type="button" class="mode-btn" data-mode="conteo">Conteo</button>
+                                <button type="button" class="mode-btn active" data-mode="porcentaje">100%</button>
+                            </div>
+
+                            <div class="legend-group" id="chart2-series-group" role="group" aria-label="Modalidad de atención">
+                                <span class="legend-label">Modalidad:</span>
+                                <button type="button" class="series-btn active" data-series="conCita" aria-pressed="true">
+                                    <span class="legend-dot dot-atendidas"></span>
+                                    Atendidas con cita
+                                </button>
+                                <button type="button" class="series-btn active" data-series="sinCita" aria-pressed="true">
+                                    <span class="legend-dot dot-sin-cita"></span>
+                                    Atendidas sin cita
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="chart-divider"></div>
+
+                        <div class="h-chart-wrapper">
+                            <div class="h-chart-body">
+                                <div class="h-y-axis-label">Centros</div>
+                                <div class="h-plot-area">
+                                    <div class="h-grid-lines" id="chart2-grid-lines"></div>
+                                    <div class="h-rows-container" id="chart2-rows-container"></div>
+                                </div>
+                            </div>
+                            <div class="h-x-axis-labels" id="chart2-x-labels"></div>
+                            <div class="h-x-axis-title" id="chart2-x-title">Distribución (%)</div>
+                        </div>
+                    </article>
+
+                    <!-- GRÁFICA 4: Tendencia mensual por centro -->
+                    <article class="chart-card">
+                        <div class="chart-top-pills">
+                            <span class="pill-tag pill-teal" id="line-centro-pill">Todos los Centros</span>
+                        </div>
+
+                        <h3 class="chart-main-title">Tendencia mensual por centro</h3>
+
+                        <div class="chart-toolbar">
+                            <div class="mode-toggle" id="line-metric-toggle" role="group" aria-label="Métrica de la tendencia">
+                                <button type="button" class="metric-btn active" data-metric="visitas">Visitas</button>
+                                <button type="button" class="metric-btn" data-metric="pacientes">Pacientes únicos</button>
+                            </div>
+
+                            <div class="line-legend" id="line-legend"></div>
+                        </div>
+
+                        <div class="chart-divider"></div>
+
+                        <div class="line-chart-box" id="line-chart-box"></div>
+                    </article>
+
+                </div>
+
             </div>
 
-            <!-- LIENZO INFERIOR: MAPA DE CALOR DE HORAS PICO (responde a Centro y Descripción del Área) -->
-            <div class="grid-full">
-                <article class="chart-card heatmap-card" id="desc-table-area">
-                    <div class="chart-card-header">
-                        <div class="chart-title-group">
-                            <div class="chart-eyebrow">
-                                <span class="chart-scope-pill" id="hm-filter-scope">Todos los Centros • Todas las Áreas</span>
-                                <span class="hist-type-badge">Mapa de calor</span>
-                            </div>
-                            <h3 class="chart-title">Mapa de calor: horas pico de visitas por día</h3>
-                        </div>
+            <!-- GRÁFICA 5: Mapa de calor de volumen por Día de la Semana y Hora (6:00 - 17:00) -->
+            <article class="chart-card chart-card-wide">
+                <div class="chart-top-pills">
+                    <span class="pill-tag pill-teal" id="heat-centro-pill">Todos los Centros</span>
 
-                        <div class="hm-legend-scale" aria-label="Escala de color del mapa de calor">
-                            <span>Bajo</span>
-                            <span class="hm-legend-bar"></span>
-                            <span>Crítico</span>
-                        </div>
+                    <div class="intensity-scale-legend heat-scale-legend" title="Visitas por hora">
+                        <span>Visitas por hora:</span>
+                        <span id="heat-scale-min">0</span>
+                        <span class="heat-scale-bar" id="heat-scale-bar"></span>
+                        <span id="heat-scale-max">31.4 mil</span>
                     </div>
+                </div>
 
-                    <div class="chart-canvas-wrapper" id="heatmap-container">
-                        <!-- Renderizado dinámico SVG del mapa de calor -->
-                    </div>
-                </article>
-            </div>
+                <h3 class="chart-main-title heat-main-title" id="heat-title">Distribución horaria de visitas por día de la semana</h3>
+                <p class="heat-subtitle">El volumen muestra cuándo llegan los pacientes; la espera, cuánto esperan a esa hora.</p>
+
+                <div class="chart-divider"></div>
+
+                <div class="heat-scroll">
+                    <div class="heat-box" id="heat-box"></div>
+                </div>
+            </article>
         </section>
 
         <!-- VISTA 2: EJECUCIÓN DEL CUELLO DE BOTELLA -->
@@ -329,47 +358,256 @@
             <div class="section-header">
                 <div class="section-accent orange"></div>
                 <div>
-                    <h2>Ejecución del Cuello de Botella</h2>
-                    <p>Espacio destinado al diagnóstico de tiempos de espera, saturación operativa y puntos críticos de retención.</p>
+                    <h2>Cuello de Botella — Tiempos de Espera y Pérdida de Cupos</h2>
+                    <p>Diagnóstico de fricción operativa por estación de atención y cuantificación de fuga de citas por inasistencia.</p>
                 </div>
             </div>
 
-            <div class="kpi-grid-4">
-                <div class="blank-slot kpi-slot border-orange" id="cb-kpi-1">
-                    <span class="slot-placeholder">Indicador Crítico 1</span>
-                </div>
-                <div class="blank-slot kpi-slot border-red" id="cb-kpi-2">
-                    <span class="slot-placeholder">Indicador Crítico 2</span>
-                </div>
-                <div class="blank-slot kpi-slot border-teal" id="cb-kpi-3">
-                    <span class="slot-placeholder">Indicador Capacidad 3</span>
-                </div>
-                <div class="blank-slot kpi-slot border-terracotta" id="cb-kpi-4">
-                    <span class="slot-placeholder">Indicador Retención 4</span>
-                </div>
+            <!-- Fila 1: Tiempos de Espera y Saturación (5 Tarjetas) -->
+            <div class="kpi-grid-5">
+                <article class="kpi-card border-orange">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Tiempo Prom. Espera</span>
+                        <span class="kpi-badge badge-orange">Global</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-tiempo-prom-espera">--</div>
+                    <div class="kpi-sub">Promedio de espera en atendidos</div>
+                </article>
+
+                <article class="kpi-card border-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Mediana Espera Seguro</span>
+                        <span class="kpi-badge badge-red">Cuello Botella</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-mediana-seguro">--</div>
+                    <div class="kpi-sub">Demora central en validación de seguro</div>
+                </article>
+
+                <article class="kpi-card border-teal">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Mediana Espera Caja</span>
+                        <span class="kpi-badge badge-teal">Fluido</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-mediana-caja">--</div>
+                    <div class="kpi-sub">Tiempo central en proceso de caja</div>
+                </article>
+
+                <article class="kpi-card border-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">P90 Espera Atendidos</span>
+                        <span class="kpi-badge badge-red">Crítico P90</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-p90-atendidos">--</div>
+                    <div class="kpi-sub">Umbral del 10% con mayor espera</div>
+                </article>
+
+                <article class="kpi-card border-orange">
+                    <div class="kpi-header">
+                        <span class="kpi-title">P90 Espera Profesionales</span>
+                        <span class="kpi-badge badge-orange">Consultorio</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-p90-profesionales">--</div>
+                    <div class="kpi-sub">Percentil 90 en sala del profesional</div>
+                </article>
             </div>
 
-            <div class="grid-equal">
-                <div class="blank-slot chart-slot-lg" id="cb-chart-left">
-                    <span class="slot-placeholder">Lienzo Flujo / Embudo del Cuello de Botella</span>
-                </div>
-                <div class="blank-slot chart-slot-lg" id="cb-chart-right">
-                    <span class="slot-placeholder">Lienzo Comparativo de Tiempos por Área / Centro</span>
-                </div>
+            <!-- Fila 2: Pérdida de Agenda e Inasistencia (5 Tarjetas) -->
+            <div class="kpi-grid-5">
+                <article class="kpi-card border-terracotta">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Total No Atendidas</span>
+                        <span class="kpi-badge badge-terracotta">Pérdida Bruta</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-total-no-atendidas">--</div>
+                    <div class="kpi-sub">Visitas agendadas no concretadas</div>
+                </article>
+
+                <article class="kpi-card border-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">% No Atendidas</span>
+                        <span class="kpi-badge badge-red">Tasa Pérdida</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-pct-no-atendidas">--</div>
+                    <div class="kpi-sub">Porcentaje global sin atención</div>
+                </article>
+
+                <article class="kpi-card border-terracotta">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Total Inasistencias</span>
+                        <span class="kpi-badge badge-terracotta">Estado 8</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-total-inasistencias">--</div>
+                    <div class="kpi-sub">Pacientes que no se presentaron</div>
+                </article>
+
+                <article class="kpi-card border-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">% Inasistencia (Total)</span>
+                        <span class="kpi-badge badge-red">A la Fecha</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-pct-inasistencia-total">--</div>
+                    <div class="kpi-sub">Sobre total de citas que llegaron a su fecha</div>
+                </article>
+
+                <article class="kpi-card border-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">% Inasistencia (Vigentes)</span>
+                        <span class="kpi-badge badge-red">Fuga Real</span>
+                    </div>
+                    <div class="kpi-value" id="kpi-pct-inasistencia-vigentes">--</div>
+                    <div class="kpi-sub">Excluyendo canceladas y reprogramadas</div>
+                </article>
             </div>
 
-            <div class="grid-full">
-                <div class="blank-slot table-slot" id="cb-matrix-area">
-                    <span class="slot-placeholder">Lienzo Matriz de Ejecución / Hallazgos</span>
+            <!-- ================= GRÁFICA CB-1: DESCOMPOSICIÓN DEL TIEMPO POR DEPARTAMENTO ================= -->
+            <article class="chart-card chart-card-wide" id="card-cb-descomposicion">
+                <div class="chart-top-pills">
+                    <span class="pill-tag pill-orange" id="cb1-centro-pill">Todos los Centros</span>
+                    <span class="pill-tag pill-gray" id="cb1-vista-pill">Vista: Mediana (experiencia típica)</span>
                 </div>
-            </div>
+
+                <div class="cb-header-flex">
+                    <div>
+                        <h3 class="chart-main-title heat-main-title">Descomposición del Tiempo de Atención por Departamento</h3>
+                        <p class="heat-subtitle" id="cb1-subtitle">Duración acumulada por tramo del recorrido — Vista: Mediana (experiencia típica)</p>
+                    </div>
+
+                    <div class="mode-toggle" id="cb1-mode-toggle" role="group" aria-label="Métrica de descomposición">
+                        <button type="button" class="mode-btn active" data-mode="mediana">Mediana (Típico)</button>
+                        <button type="button" class="mode-btn" data-mode="p90">Percentil 90 (Cuello de Botella)</button>
+                    </div>
+                </div>
+
+                <div class="cb-stages-legend" id="cb1-legend"></div>
+
+                <div class="chart-divider"></div>
+
+                <div class="cb-decomp-scroll">
+                    <div class="cb-decomp-box" id="cb1-chart-box"></div>
+                </div>
+            </article>
+
+            <!-- ================= GRÁFICA CB-2: CURVA DE CONGESTIÓN POR CENTRO (TEORÍA DE COLAS) ================= -->
+            <article class="chart-card chart-card-wide" id="card-cb-congestion">
+                <div class="chart-top-pills">
+                    <span class="pill-tag pill-orange" id="cb2-centro-pill">Todos los Centros</span>
+                    <span class="pill-tag pill-gray">Teoría de Colas • Horario 6:00 AM - 5:00 PM</span>
+
+                    <div class="cb-queue-legend">
+                        <span class="cb-q-item"><span class="cb-q-line-solid"></span> Tendencia de congestión</span>
+                        <span class="cb-q-item"><span class="cb-q-line-dash"></span> Límite (+50% sobre mediana)</span>
+                    </div>
+                </div>
+
+                <h3 class="chart-main-title heat-main-title">Curva de Congestión por Centro (Teoría de Colas)</h3>
+                <p class="heat-subtitle">Pacientes citados en una hora (Eje X) vs. Tiempo de espera crítico P90 desde cita (Eje Y)</p>
+
+                <div class="chart-divider"></div>
+
+                <div class="cb-queue-grid" id="cb2-queue-grid"></div>
+            </article>
+
+            <!-- ================= GRÁFICA CB-3: MAPA DE SATURACIÓN DÍA × HORA (ESPERA DESDE LLEGADA) ================= -->
+            <article class="chart-card chart-card-wide" id="card-cb-saturacion">
+                <div class="chart-top-pills">
+                    <span class="pill-tag pill-orange" id="cb3-centro-pill">Todos los Centros</span>
+                    <span class="pill-tag pill-gray" id="cb3-metric-pill">Métrica: Percentil 90 (Crítico)</span>
+
+                    <div class="intensity-scale-legend heat-scale-legend" title="Tiempo de espera desde llegada (min)">
+                        <span>Espera (min):</span>
+                        <span id="cb3-scale-min">0m</span>
+                        <span class="heat-scale-bar"></span>
+                        <span id="cb3-scale-max">163m</span>
+                    </div>
+                </div>
+
+                <div class="cb-header-flex">
+                    <div>
+                        <h3 class="chart-main-title heat-main-title" id="cb3-title">Mapa de Saturación Día × Hora — Percentil 90</h3>
+                        <p class="heat-subtitle">Tiempo de espera desde llegada (minutos) por día y franja horaria</p>
+                    </div>
+
+                    <div class="mode-toggle" id="cb3-mode-toggle" role="group" aria-label="Filtro Mapa de Saturación">
+                        <button type="button" class="mode-btn active" data-mode="p90">Percentil 90 (Crítico)</button>
+                        <button type="button" class="mode-btn" data-mode="mediana">Mediana (Típico)</button>
+                    </div>
+                </div>
+
+                <div class="chart-divider"></div>
+
+                <div class="heat-scroll">
+                    <div class="heat-box" id="cb3-heat-box"></div>
+                </div>
+            </article>
+
+            <!-- ================= GRÁFICA CB-4: HORA CITADA VS. HORA DE LLEGADA POR DEPARTAMENTO ================= -->
+            <article class="chart-card chart-card-wide" id="card-cb-puntualidad">
+                <div class="chart-top-pills">
+                    <span class="pill-tag pill-orange" id="cb4-centro-pill">Todos los Centros</span>
+                    <span class="pill-tag pill-gray" id="cb4-tanda-pill">Vista: Consolidado General</span>
+                </div>
+
+                <div class="cb-header-flex">
+                    <div>
+                        <h3 class="chart-main-title heat-main-title">Hora Citada vs. Hora de Llegada por Departamento</h3>
+                        <p class="heat-subtitle" id="cb4-subtitle">Comparación de medianas horarias — Vista: Consolidado General</p>
+                    </div>
+
+                    <div class="mode-toggle" id="cb4-tanda-toggle" role="group" aria-label="Filtro por Tanda">
+                        <button type="button" class="mode-btn active" data-tanda="Todas">Consolidado</button>
+                        <button type="button" class="mode-btn" data-tanda="Matutina">Tanda Matutina</button>
+                        <button type="button" class="mode-btn" data-tanda="Vespertina">Tanda Vespertina</button>
+                    </div>
+                </div>
+
+                <div class="cb-punt-legend">
+                    <span class="cb-punt-leg-item"><span class="legend-dot" style="background:#2563eb"></span> Hora de la Cita (Mediana)</span>
+                    <span class="cb-punt-leg-item"><span class="legend-dot" style="background:#f97316"></span> Hora de Llegada (Mediana)</span>
+                </div>
+
+                <div class="chart-divider"></div>
+
+                <div class="cb-punt-scroll">
+                    <div class="cb-punt-box" id="cb4-chart-box"></div>
+                </div>
+            </article>
         </section>
 
     </main>
 
-    <!-- Tooltip Flotante Global para Gráficas y Tarjetas de Cuartiles -->
-    <div id="chart-tooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
+    <!-- Cuadro Flotante (Tooltip) compartido para las gráficas de barras y pirámide -->
+    <div id="chart-tooltip" class="chart-tooltip" role="tooltip" aria-hidden="true">
+        <div class="tt-title" id="tt-centro">SANTO DOMINGO</div>
+        <div class="tt-subtitle" id="tt-subtitulo">Filtro: Todos los Centros</div>
+        <div class="tt-divider"></div>
+        <div class="tt-row" id="tt-row-1">
+            <span class="tt-label">
+                <span class="legend-dot" id="tt-dot-1"></span>
+                <span id="tt-label-1">Atendidas</span>
+            </span>
+            <span class="tt-val" id="tt-val-1">393,466 (64%)</span>
+        </div>
+        <div class="tt-row" id="tt-row-2">
+            <span class="tt-label">
+                <span class="legend-dot" id="tt-dot-2"></span>
+                <span id="tt-label-2">No atendidas</span>
+            </span>
+            <span class="tt-val" id="tt-val-2">224,576 (36%)</span>
+        </div>
+        <div class="tt-dashed-divider"></div>
+        <div class="tt-total-row">
+            <span id="tt-total-label">Total visitas</span>
+            <span id="tt-total">618,042</span>
+        </div>
+    </div>
 
+    <!-- Cuadro Flotante (Tooltip) para las gráficas avanzadas y mapas de calor -->
+    <div id="extra-tooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <!-- Datos opcionales exportados desde Python -->
+    <script src="datos_mensuales.js"></script>
+    <script src="datos_horas.js"></script>
+    <script src="datos_cuello_botella.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
